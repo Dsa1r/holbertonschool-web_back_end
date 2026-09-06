@@ -2,6 +2,8 @@
 """
 Build a helper method to show the first and end index of the page
 """
+
+
 def index_range(page, page_size):
     """
     Calculate the start and end index for a given page and page size.
