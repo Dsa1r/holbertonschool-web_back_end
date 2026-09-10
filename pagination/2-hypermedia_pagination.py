@@ -5,9 +5,10 @@ Build a helper method to get the page
 
 import csv
 import math
-from typing import List
+from typing import List, Dict
 
 index_range = __import__('0-simple_helper_function').index_range
+
 
 class Server:
     """Server class to paginate a database of popular baby names.
@@ -62,6 +63,6 @@ class Server:
             "data": data,
             "next_page": page + 1 if page < total_pages else None,
             "prev_page": page - 1 if page > 1 else None,
-            "total_pages": total_pages  
+            "total_pages": total_pages
         }
     
