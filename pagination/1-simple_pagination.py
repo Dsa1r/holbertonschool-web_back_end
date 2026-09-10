@@ -37,10 +37,13 @@ class Server:
             page_size (int): The number of items per page.
 
         Returns:
-            List[List]: A list of lists representing the requested page of data.
+            List[List]: A list of lists representing \
+            the requested page of data.
         """
-        assert isinstance(page, int) and page > 0, "Page must be a positive integer."
-        assert isinstance(page_size, int) and page_size > 0, "Page size must be a positive integer."
+        assert isinstance(page, int) and page > 0, \
+            "Page must be a positive integer."
+        assert isinstance(page_size, int) and page_size > 0, \
+            "Page size must be a positive integer."
 
         start_index, end_index = index_range(page, page_size)
         return self.dataset()[start_index:end_index]
